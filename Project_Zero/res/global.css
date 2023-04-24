@@ -26,17 +26,10 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
+	display: block}
 	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
+ol, ul {list-style: none;}
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
@@ -45,4 +38,107 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+/*end of class reset*/
+
+/*global styles begin*/
+body{font-family:'Poppins','Arial','Helvetica','Roboto',sans-serif;
+font-size:clamp(10px,1vw,14px);
+}
+div{box-sizing:border-box;}
+/*typography*/
+div.rtf{}
+div.rtf p{font-size:1em; line-height:1.5em; margin-bottom:0.5em;}
+div.rtf h1{font-size:3.2em; line-height:1.5em; margin-bottom:0.5em; margin-top: 1em;}
+div.rtf h2{font-size:2.4em; line-height:1.5em; margin-bottom:0.5em; margin-top: 1em;}
+div.rtf h3{font-size:1.8em; line-height:1.5em; margin-bottom:0.5em; margin-top: 1em;}
+div.rtf h4{font-size:1.2em; line-height:1.5em; margin-bottom:0.5em; margin-top: 1em;}
+/*global styles begin*/
+/*header styles*/
+header{position:fixed; top:0; left:0; right:0; display:grid;
+	grid-template-columns: 60px 1fr 1fr; grid-gap:20px; background:#333; color:#fff;
+	z-index:10000;
+}
+header img{width:30px; margin:1em; align-self:center; justify-self:end;}
+header p{font-size:1.7em; align-self:center; justify-self:start;}
+header a.mail{text-decoration:none; align-self:center; justify-self:end; color:#fff;
+	margin:0 20px; font-size:1.7em}
+
+
+div.xframe{padding-top:6em; min-height:100vh; background-size:30px;}
+
+div.hero{min-height:100vh; position: relative; }
+img.hero-img{width:100%; height:100vh; object-fit:cover;}
+div.hero-txt{position: absolute;
+	top:50%; left:50%; transform:translate(-50%,-50%);
+	background-color:rgba(255,255,255,0.5);
+  padding:5em; font-size:2em;
+}
+div.hero-txt h2{margin-top:0;}
+
+div.text_image{
+		--padding:1vw;
+}
+
+
+div.text_image{max-width:2000px; min-height:30vh; margin:0 auto; display:grid; grid-template-columns: 1fr 1fr; grid-gap:5vw; padding:5vw;
+}
+
+div.text_image img{width:100%; max-height:80vh; object-fit:contain; margin-bottom:var(--padding); padding:40px; display: block;
+    box-sizing: border-box;}
+div.text_image div.txt{align-self:start; max-width:65ch;}
+
+
+
+div.cards{max-width:1200px; margin:0 auto;
+		display:grid; grid-template-columns: repeat(auto-fill,minmax(min(275px,100%),1fr)); grid-gap:5vw; padding:1vw;
+}
+
+
+div.cards div.card{}
+div.cards div.card img{width:100%;}
+div.cards div.card div.txt{text-align:center; padding:1vw 1vw;}
+div.cards div.card{background:(0,200,255,0.5);}
+div.cards div.car a {}
+
+
+div.hero2{min-height:30vh;background:#fff}
+div.hero2-txt{font-size:5vw;text-transform:uppercase; font-weight:bold;
+font-size:5vw; padding: 6vw; margin:0 auto;
+/*min-height: 100vh;
+background-image:url(black.jpeg);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+color: #de466c;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;*/
+}
+div.hero2-txt.rtf h2{margin-top: ;line-height: 1em; font-weight: 900;}
+
+div.dark{background:#333; padding:2vw; margin: 0 auto; }
+
+
+div.hero3{min-height:10vh;text-align:center;}
+div.hero3-txt{font-size:2em;text-transform:lowercase; font-weight:bold;
+font-size:2em;}
+
+
+div.hero4{min-height:10vh;align-self:center;}
+div.hero4-txt{font-size:0.5em; padding: 1vw;color:#fff;}
+
+@media screen and (orientation: portrait) {
+	div.text_image{grid-template-columns: 1fr;}
+	div.text_image div.txt{justify-self:start; grid-row-start:1; }
+	div.text_image img{padding:0;}
+	header a.mail{text-decoration:none; align-self:center; justify-self:end; color:#fff;
+		margin:0 20px; font-size:1.9em}
+		header p{font-size:1em; align-self:center; justify-self:start;}
+		div.text_image{max-width:2000px; min-height:30vh; margin:0 auto; grid-gap:10vw; padding:10vw;}
+		div.dark{background:#333; padding:10vw; margin: 0 auto; }
+		div.hero3-txt{font-size:1.7em;text-transform:lowercase; font-weight:bold;
+		font-size:2em;padding:2vw;}
+	div.hero2{min-height:0vh;background:#fff}
 }
